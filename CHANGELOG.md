@@ -1,3 +1,7 @@
+## 1.4.19 (Aug 23th, 2021)
+
+- Custom modification: add Czech stemmer to xapian-core
+
 ## 1.4.18 (June 29th, 2021)
 
 - version bump to Xapian 1.4.18

@@ -9,9 +9,9 @@ def system!(cmd)
 	system(cmd) or raise
 end
 
-ver = '1.4.18'
+ver = '1.4.19'
 source_dir = 'xapian_source'
-core = "xapian-core-#{ver}"
+core = "xapian-core-#{ver}-easy"
 bindings = "xapian-bindings-#{ver}"
 xapian_config = "#{Dir.pwd}/#{core}/xapian-config"
 

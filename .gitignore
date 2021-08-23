@@ -2,3 +2,4 @@
 *.tmproj
 *.sublime-*
 pkg
+*.DS_Store
