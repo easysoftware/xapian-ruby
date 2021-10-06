@@ -22,6 +22,7 @@ task :default do
 
 	prefix = Dir.pwd
 	ENV['LDFLAGS'] = "-L#{prefix}/lib"
+	ENV['CXXFLAGS'] = "-fdeclspec"
 
 	system! "mkdir -p lib"
 
