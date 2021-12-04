@@ -1,3 +1,7 @@
+## 1.4.20 (Dec 3th, 2021)
+
+- Custom modification: add Polish stemmer to xapian-core
+
 ## 1.4.19 (Aug 23th, 2021)
 
 - Custom modification: add Czech stemmer to xapian-core
