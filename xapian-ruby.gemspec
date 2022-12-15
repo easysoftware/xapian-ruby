@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version     = ">= 1.8.0"
   s.required_rubygems_version = ">= 1.3.6"
+  s.metadata['allowed_push_host'] = "https://gems.easysoftware.com"
 
   s.files = Dir.glob("xapian_source/*") + %w(LICENSE README.rdoc CHANGELOG.md Rakefile)
 end
