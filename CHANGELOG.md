@@ -1,3 +1,8 @@
+## 1.5.0 (Jan 26th, 2023)
+ - Update xapian-core to 1.4.21
+ - Add prototype of exact-op feature
+ - Force to build x64 bit (docid, termpos and termcount)
+
 ## 1.4.20 (Dec 3th, 2021)
 
 - Custom modification: add Polish stemmer to xapian-core
