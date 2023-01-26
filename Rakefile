@@ -28,7 +28,7 @@ task :default do
 
   Dir.chdir core do
     system! 'sed -i".bak" -e "s/darwin\\[91\\]/darwin[912]/g" configure'
-    system! "./configure --prefix=#{prefix} --exec-prefix=#{prefix} --enable-64bit-docid --enable-64bit-termcount --enable-64bit-termpos"
+    system! "./configure --prefix=#{prefix} --exec-prefix=#{prefix} --enable-64bit-docid --enable-64bit-termcount --enable-64bit-termpos --disable-documentation"
     system! "make"
     system! "cp -r .libs/* ../lib/"
   end
@@ -44,7 +44,7 @@ task :default do
     ENV['RUBY'] ||= "#{c['bindir']}/#{c['RUBY_INSTALL_NAME']}"
     ENV['XAPIAN_CONFIG'] = xapian_config
     ENV['SWIG'] = "#{prefix}/#{swig}/preinst-swig"
-    system! "./configure --prefix=#{prefix} --exec-prefix=#{prefix} --with-ruby --enable-maintainer-mode"
+    system! "./configure --prefix=#{prefix} --exec-prefix=#{prefix} --with-ruby --enable-maintainer-mode --disable-documentation"
     system! "make"
   end
 
