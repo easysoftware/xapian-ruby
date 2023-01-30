@@ -13,10 +13,9 @@ source_dir = 'xapian_source'
 core = "xapian-core"
 bindings = "xapian-bindings"
 xapian_config = "#{Dir.pwd}/#{core}/xapian-config"
-swig = "swig"
 
 task :default do
-  [core, bindings, swig].each do |x|
+  [core, bindings].each do |x|
     system! "tar -xJf #{source_dir}/#{x}.tar.xz"
   end
 
@@ -33,18 +32,11 @@ task :default do
     system! "cp -r .libs/* ../lib/"
   end
 
-  Dir.chdir swig do
-    system! "./autogen.sh"
-    system! "./configure"
-    system! "make"
-  end
-
   Dir.chdir bindings do
     system! 'sed -i".bak" -e "s/darwin\\[91\\]/darwin[912]/g" configure'
     ENV['RUBY'] ||= "#{c['bindir']}/#{c['RUBY_INSTALL_NAME']}"
     ENV['XAPIAN_CONFIG'] = xapian_config
-    ENV['SWIG'] = "#{prefix}/#{swig}/preinst-swig"
-    system! "./configure --prefix=#{prefix} --exec-prefix=#{prefix} --with-ruby --enable-maintainer-mode --disable-documentation"
+    system! "./configure --prefix=#{prefix} --exec-prefix=#{prefix} --with-ruby --disable-documentation"
     system! "make"
   end
 
@@ -55,7 +47,6 @@ task :default do
   system! "rm lib/*.la"
   system! "rm lib/*.lai"
 
-  system! "rm -R #{swig}"
   system! "rm -R #{bindings}"
   system! "rm -R #{core}"
   system! "rm -R #{source_dir}"
