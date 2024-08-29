@@ -1,3 +1,6 @@
+## 1.5.1 (Aug 29th, 2024)
+- Update ruby swig wrappers
+
 ## 1.5.0 (Jan 26th, 2023)
  - Update xapian-core to 1.4.21
  - Add prototype of exact-op feature

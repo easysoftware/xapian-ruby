@@ -6,7 +6,7 @@ $:.unshift lib unless $:.include?(lib)
 
 Gem::Specification.new do |s|
   s.name         = %q{easy_xapian-ruby}
-  s.version      = "1.5.0"
+  s.version      = "1.5.1"
   s.authors      = ["Gernot Kogler", "Easy Software Ltd."]
   s.summary      = %q{xapian libraries and ruby bindings}
   s.email        = %q{gernot.kogler (at) garaio (dot) com}
